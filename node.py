@@ -5,6 +5,7 @@ class Node:
         self.key = key
         self.right = right
         self.left = left
+        self.height = 1
     
     def update_right(new_node):
         pass
