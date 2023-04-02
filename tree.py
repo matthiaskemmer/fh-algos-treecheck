@@ -64,8 +64,6 @@ class Tree:
         else:
             print(f"bal({node.key}) = {height_diff}")
 
-        return left_subtree_avl and right_subtree_avl
-
     def load_file(self, file_path: str):
         """Load tree from text file."""
         with open(file_path, 'r') as file:
@@ -107,8 +105,6 @@ class Tree:
         
         print(f"AVL:", (self.is_avl))
         print(f"min: {stats['min']}, max: {stats['max']}, avg: {stats['sum'] / stats['count']}")
-
-
     
     def print_tree_recursive(self, current_node):
         if current_node: #equal to if current_node is None
