@@ -109,13 +109,8 @@ class Tree:
         # key arithmetic average
         pass
     
-    def _print_tree_recursive(self, current_node):
-        if current_node is not None:
-            self._print_tree_recursive(current_node.left)
+    def print_tree_recursive(self, current_node):
+        if current_node: #equal to if current_node is None
+            self.print_tree_recursive(current_node.left)
             print(current_node.key)
-            self._print_tree_recursive(current_node.right)
-
-            
-    def print_tree(self):
-        """Print tree nodes in order."""
-        self._print_tree_recursive(self.root)
+            self.print_tree_recursive(current_node.right)
