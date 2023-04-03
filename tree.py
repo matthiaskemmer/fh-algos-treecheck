@@ -77,8 +77,8 @@ class Tree:
             # An empty node is always an AVL node
             return {'min': None, 'max': None, 'sum': 0, 'count': 0}
         
-        self.update_tree_stats(node.right)
-        self.update_tree_stats(node.left)
+        right_stats = self.update_tree_stats(node.right)
+        left_stats = self.update_tree_stats(node.left)
 
         # Calculate the min and max values
         min_val = node.key
