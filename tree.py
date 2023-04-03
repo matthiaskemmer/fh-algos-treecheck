@@ -53,8 +53,8 @@ class Tree:
             # An empty node is always an AVL node
             return True
 
-        right_subtree_avl = self.treecheck(node.right)
-        left_subtree_avl = self.treecheck(node.left)
+        self.treecheck(node.right)
+        self.treecheck(node.left)
 
         # Check if the node's height and balance factor are correct
         height_diff = self.get_height(node.right) - self.get_height(node.left)
