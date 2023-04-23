@@ -3,20 +3,20 @@ from tree import Tree
 
 def test():
     tree = Tree()
-    tree.load_file("data/tree2")
+    tree.load_file("data/tree2.txt")
     print("TREECHECK:")
     tree.treecheck(tree.root)
     tree.print_stats()
     print()
 
     subtree_list = [
-        "data/tree2_single_true",
-        "data/tree2_single_false",
-        "data/tree2_subtree_true",
-        "data/tree2_subtree_true2",
-        "data/tree2_subtree_true3",
-        "data/tree2_subtree_false",
-        "data/tree2_subtree_false2",
+        "data/tree2_single_true.txt",
+        "data/tree2_single_false.txt",
+        "data/tree2_subtree_true.txt",
+        "data/tree2_subtree_true2.txt",
+        "data/tree2_subtree_true3.txt",
+        "data/tree2_subtree_false.txt",
+        "data/tree2_subtree_false2.txt",
     ]
 
     for path in subtree_list:

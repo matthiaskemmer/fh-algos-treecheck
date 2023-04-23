@@ -126,10 +126,14 @@ class Tree:
             print(f"bal({node.key}) = {height_diff}")
 
     def load_file(self, file_path: str):
-        with open(file_path, "r") as file:
-            for line in file:
-                key = int(line.strip())
-                self.add_node(key)
+        try:
+            with open(file_path, "r") as file:
+                for line in file:
+                    key = int(line.strip())
+                    self.add_node(key)
+        except FileNotFoundError:
+            print("File not found.")
+            exit()
 
     def update_stats(self, node):
         if not node:
