@@ -1,9 +1,45 @@
 from tree import Tree
 
-if __name__ == "__main__":
-    file_path = input("Enter the path to the tree file: ")
+
+def test():
+    tree = Tree()
+    tree.load_file("data/tree2")
+    print("TREECHECK:")
+    tree.treecheck(tree.root)
+    tree.print_stats()
+    print()
+
+    subtree_list = [
+        "data/tree2_single_true",
+        "data/tree2_single_false",
+        "data/tree2_subtree_true",
+        "data/tree2_subtree_true2",
+        "data/tree2_subtree_true3",
+        "data/tree2_subtree_false",
+        "data/tree2_subtree_false2",
+    ]
+
+    for path in subtree_list:
+        print("Searching: ", path)
+        tree2 = Tree()
+        tree2.load_file(path)
+        tree.search(tree2)
+        print()
+
+
+def run():
+    file_path = input("Enter tree filepath: ")
     tree = Tree()
     tree.load_file(file_path)
-    #tree.print_tree_recursive(tree.root)
     tree.treecheck(tree.root)
-    tree.print_tree_stats()
+    tree.print_stats()
+
+    file_path2 = input("Enter second tree filepath: ")
+    tree2 = Tree()
+    tree2.load_file(file_path2)
+    tree.search(tree2)
+
+
+if __name__ == "__main__":
+    # run()
+    test()

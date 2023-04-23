@@ -6,9 +6,3 @@ class Node:
         self.right = right
         self.left = left
         self.height = 1
-    
-    def update_right(new_node):
-        pass
-
-    def update_left(new_node):
-        pass
